@@ -11,8 +11,6 @@ jobs:
   trigger-qa-suite:
     runs-on: ubuntu-latest
     steps:
-      - name: Wait for Render Deployment
-
       - name: Trigger QA Automation
         run: |
           curl -L \
