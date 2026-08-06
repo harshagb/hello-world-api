@@ -19,7 +19,7 @@ public class DemoController {
     public ResponseEntity<Map<String, String>> getStatus() {
         Map<String, String> response = new HashMap<>();
         response.put("status", "UP");
-        response.put("role", "Developer");
+        response.put("role", "Harsha is a Developer");
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
