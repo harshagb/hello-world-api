@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Wait for Render Deployment
-        # Pauses the script for 3 minutes to give Render time to put your code live
-        run: sleep 180
 
       - name: Trigger QA Automation
         run: |
