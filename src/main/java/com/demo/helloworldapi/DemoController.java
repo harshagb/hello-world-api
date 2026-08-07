@@ -16,7 +16,7 @@ import java.util.Map;
 @RequestMapping("/api")
 public class DemoController {
 
-    @GetMapping("/api/status")
+    @GetMapping("/status")
     public String getStatus(@RequestHeader(value = "User-Agent", defaultValue = "Browser") String userAgent) {
         
         // This will print directly to your Render Dashboard Logs!
