@@ -15,13 +15,13 @@ import java.util.Map;
 @RequestMapping("/api")
 public class DemoController {
 
-    @GetMapping("/status")
-    public ResponseEntity<Map<String, String>> getStatus() {
-        Map<String, String> response = new HashMap<>();
-        response.put("status", "UP");
-        response.put("role", "Harsha is a Developer");
-        response.put("message", "Developer Message");
-        return new ResponseEntity<>(response, HttpStatus.OK);
+    @GetMapping("/api/status")
+    public String getStatus(@RequestHeader(value = "User-Agent", defaultValue = "Browser") String userAgent) {
+        
+        // This will print directly to your Render Dashboard Logs!
+        System.out.println("🟢 /api/status endpoint hit by: " + userAgent);
+        
+        return "{\"status\": \"UP\", \"role\": \"Developer\"}";
     }
 
     @PostMapping("/echo")
