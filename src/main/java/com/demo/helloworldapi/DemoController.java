@@ -16,10 +16,10 @@ import java.util.Map;
 @RequestMapping("/api")
 public class DemoController {
 
-    @GetMapping("/status")
+    // Add the 'produces' parameter right here!
+    @GetMapping(value = "/status", produces = "application/json")
     public String getStatus(@RequestHeader(value = "User-Agent", defaultValue = "Browser") String userAgent) {
         
-        // This will print directly to your Render Dashboard Logs!
         System.out.println("🟢 /api/status endpoint hit by: " + userAgent);
         
         return "{\"status\": \"UP\", \"role\": \"Developer\"}";
