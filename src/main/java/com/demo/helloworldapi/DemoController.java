@@ -20,9 +20,7 @@ public class DemoController {
     @GetMapping(value = "/status", produces = "application/json")
     public String getStatus(@RequestHeader(value = "User-Agent", defaultValue = "Browser") String userAgent) {
         
-        System.out.println("🟢 /api/status endpoint hit by: " + userAgent);
-        
-        return "{\"status\": \"UP\", \"role\": \"Tester\"}";
+        throw new Exception();
     }
 
     @PostMapping("/echo")
