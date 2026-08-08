@@ -22,7 +22,7 @@ public class DemoController {
         
         System.out.println("🟢 /api/status endpoint hit by: " + userAgent);
         
-        return "{\"status\": \"UP\", \"role\": \"Developer\"}";
+        return "{\"status\": \"UP\", \"role\": \"Tester\"}";
     }
 
     @PostMapping("/echo")
